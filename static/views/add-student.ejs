@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add Student</title>
+  <link rel="stylesheet" href="../add-student.css">
+</head>
+<body>
+  
+  <form action="/add-student" method="POST" id="add-student-form">
+    <h1>Add Student</h1>
+    <div>
+      <label for="name-input">Name:</label>
+      <input type="text" id="name-input" name="name" required>
+    </div>
+    <div>
+      <label for="roll-input">Roll Number:</label>
+      <input type="number" id="roll-input" name="roll_no" required>
+    </div>
+    <div>
+      <label for="branch-input">Branch:</label>
+      <input type="text" id="branch-input" name="branch" required>
+    </div>
+    <div>
+      <label for="room-input">Room:</label>
+      <input type="number" id="room_no-input" name="room_no" required>
+    </div>
+    <div>
+      <label for="username-input">username:</label>
+      <input type="text" id="username-input" name="username" required>
+    </div>
+    <div>
+      <label for="password-input">Password:</label>
+      <input type="text" id="password-input" name="password" required>
+    </div>
+    
+    <div id="error">
+        <p><%= error %></p>
+    </div>
+    <div id="msg">
+        <p><%= msg %></p>
+    </div>
+    <!-- Add more input fields as needed -->
+
+    <button type="submit">Add Student</button>
+  </form>
+  <a href="/w-dashboard"><button>Go Back</button></a>
+
+</body>
+</html>

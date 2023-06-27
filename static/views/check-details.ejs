@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add Student</title>
+  <link rel="stylesheet" href="../add-student.css">
+</head>
+<body>
+  
+  <form action="/check-details" method="POST" id="check-details-form">
+    <h1>Check Details</h1>
+    <div>
+      <label for="number-input">Roll Number:</label>
+      <input type="number" id="number-input" name="roll_num" required>
+    </div>
+    <div id="error">
+        <p><%= error %></p>
+    </div>
+
+    <button type="submit">Check</button>
+  </form>
+  <a href="/w-dashboard"><button>Go Back</button></a>
+
+</body>
+</html>

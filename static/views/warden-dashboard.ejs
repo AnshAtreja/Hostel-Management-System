@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warden Dashboard</title>
+  <link rel="stylesheet" href="../warden-dashboard.css">
+</head>
+<body>
+    <header><h1>Welcome <%= warden.name %> to Hostel's Warden Dashboard</h1></header>
+    <div class="image-container">
+        <img src="../images/img2.jpg" alt="Image Description">
+    </div>
+
+  <div class="button-container">
+    <p>Choose your function</p>
+    <a href="/add-room"><button id="add-room-btn">Add Room</button></a>
+    <a href="/add-student"><button id="add-student-btn">Add Student</button></a>
+    <a href="/check-details"><button id="check-details-btn">Check Details</button></a>
+    <a href="/wr-logout"><button id="logout-btn">Logout</button></a>
+  </div>
+  <footer><div>This is reserved by ABC College</div></footer>
+
+</body>
+</html>

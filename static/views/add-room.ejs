@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add Student</title>
+  <link rel="stylesheet" href="../add-student.css">
+</head>
+<body>
+  
+  <form action="/add-room" method="POST" id="add-room-form">
+    <h1>Add Room</h1>
+    <div>
+      <label for="number-input">Room Number:</label>
+      <input type="number" id="number-input" name="room_no" required>
+    </div>
+    <div>
+      <label for="capacity-input">Capacity:</label>
+      <input type="number" id="capacity-input" name="capacity" required>
+    </div>
+    <div id="error">
+        <p><%= error %></p>
+    </div>
+    <div id="msg">
+        <p><%= msg %></p>
+    </div>
+
+    <button type="submit">Add Room</button>
+  </form>
+  <a href="/w-dashboard"><button>Go Back</button></a>
+
+</body>
+</html>
