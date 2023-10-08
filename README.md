@@ -1,4 +1,4 @@
-# Hostel-Management-System
+# HostelEase
 
 ## Images
 
