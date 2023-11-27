@@ -1,5 +1,9 @@
 # HostelEase
 
+- A web application that helps in managing the activities that take place inside a hostel premises. 
+- The purpose of creating this application was to replace the traditional physical methods and use a digitized platform to manage the activities of the hostel. It provides a separate user interface for warden of hostel and hostel residents. The warden dashboard has several features such as adding room, adding student, approve pass and check details of students. The student dashboard has features like applying for home pass and changing room application.
+- This application was created using Node.js and Express.js along with EJS templates engine and MongoDB as database.
+  
 ## Images
 
 ![Login Page](project_images/hms_1.png)
