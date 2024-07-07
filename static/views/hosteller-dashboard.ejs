@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <h1>Welcome to Student Dashboard</h1>
+    <h1>Welcome <%= hosteller.name %> to Student Dashboard</h1>
   </header>
   <div class="image-container">
     <img src="./images/img2.jpg" alt="Image Description">
@@ -18,9 +18,8 @@
 
   <div class="button-container">
     <p>Choose your function</p>
-    <a href="/change-room"><button id="chng-room-btn">Change room</button></a>
     <a href="/hm-pass"><button id="home-pass-btn">Home Pass</button></a>
-    <a href="/hs-chk-det"><button id="check-details-btn">Check Details</button></a>
+    <a href="/change-room"><button id="chng-room-btn">Change room</button></a>
     <a href="/hs-logout"><button id="logout-btn">Logout</button></a>
   </div>
   <footer>

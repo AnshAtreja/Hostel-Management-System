@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Pass Requests</title>
+    <!-- Add your CSS and other styling -->
+    <link rel="stylesheet" href="../add-student.css">
+  </head>
+  <body>
+    <form action="/apprv-pass" method="POST">
+    <h1>Home Pass Requests</h1>
+    <% if (hostellers.length > 0) { %>
+      <ul>
+        <% hostellers.forEach((hosteller) => { %>
+          <li>Name: <%= hosteller.name %></li>
+          <li>Roll No: <%= hosteller.roll_no %></li>
+          <!-- Display other hosteller details as needed -->
+          <button type="submit" class="approve-button" data-hosteller-id="<%= hosteller._id %>">Approve</button></a>
+          <br>
+        <% }); %>
+      </ul>
+    <% } else { %>
+      <p>No home pass requests found</p>
+    <% } %>
+    <form>
+      <div>
+      <a href="/h-dashboard"><button id="go_back">Go Back</button></a>
+      </div>
+      <script>
+        // Client-side JavaScript
+document.addEventListener('DOMContentLoaded', () => {
+  const approveButtons = document.querySelectorAll('.approve-button');
+  approveButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const hostellerId = button.dataset.hostellerId;
+      fetch('/apprv-pass', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ hostellerId }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+        // Update the hostellers list in the UI
+        // Example: remove the approved hosteller from the list
+        const hostellerElement = document.getElementById(`hosteller-${hostellerId}`);
+        if (hostellerElement) {
+          hostellerElement.remove();
+        }
+      } else {
+        // Show an error message or handle the error case
+        console.log(data.message);
+      }
+
+          // Handle the response from the server
+          console.log(data);
+          // Refresh or update the hostellers list or perform any other necessary actions
+        })
+        .catch((error) => {
+          // Handle any errors that occurred during the request
+          console.error('Error:', error);
+        });
+    });
+  });
+});
+
+      </script>
+  </body>
+</html>

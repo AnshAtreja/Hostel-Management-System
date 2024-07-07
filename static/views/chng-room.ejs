@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Room</title>
+    <link rel="stylesheet" href="../add-student2.css">
+</head>
+<body>
+    <form action="/chng-room" method="POST" id="check-details-form">
+        <h1>Change Room</h1>
+        <div>
+          <label for="number-input">Previous Room Number:</label>
+          <input type="number" id="number-input" name="prev_room" required>
+          <label for="number-input">New Room Number:</label>
+          <input type="number" id="number-input" name="new_room" required>
+        </div>
+        <div id="error">
+            <p><%= error %></p>
+        </div>
+        <div id="msg">
+            <p><%= msg %></p>
+        </div>
+        <button type="submit">Check</button>
+      </form>
+      <a href="/h-dashboard"><button>Go Back</button></a>
+</body>
+</html>

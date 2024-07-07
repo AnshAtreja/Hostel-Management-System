@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../warden-dashboard.css">
 </head>
 <body>
-    <header><h1>Welcome <%= warden.name %> to Hostel's Warden Dashboard</h1></header>
+    <header><h1>Welcome <%= warden && warden.name ? warden.name : 'Warden' %> to Hostel's Warden Dashboard</h1></header>
     <div class="image-container">
         <img src="../images/img2.jpg" alt="Image Description">
     </div>
@@ -17,6 +17,7 @@
     <a href="/add-room"><button id="add-room-btn">Add Room</button></a>
     <a href="/add-student"><button id="add-student-btn">Add Student</button></a>
     <a href="/check-details"><button id="check-details-btn">Check Details</button></a>
+    <a href="/apprv-pass"><button id="apprv-pass-btn">Approve Pass</button></a>
     <a href="/wr-logout"><button id="logout-btn">Logout</button></a>
   </div>
   <footer><div>This is reserved by ABC College</div></footer>

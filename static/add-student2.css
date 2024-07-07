@@ -20,6 +20,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #fff;
+    min-width: 400px;
+    min-height: 400px;
   }
   
   h1 {
